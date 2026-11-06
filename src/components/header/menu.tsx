@@ -95,19 +95,19 @@ export function Menu() {
               </a></li>
               <li className="flex gap-2 items-center">
                 <a
-                  href="https://github.com/ourongxing/newsnow"
+                  href="https://github.com/cty1735/todaynews"
                 >
                   <img
                     alt="GitHub stars badge"
-                    src="https://img.shields.io/github/stars/ourongxing/newsnow?logo=github&style=flat&labelColor=%23123D2A&color=%232F8F5B"
+                    src="https://img.shields.io/github/stars/cty1735/todaynews?logo=github&style=flat&labelColor=%23123D2A&color=%232F8F5B"
                   />
                 </a>
                 <a
-                  href="https://github.com/ourongxing/newsnow/fork"
+                  href="https://github.com/cty1735/todaynews/fork"
                 >
                   <img
                     alt="GitHub forks badge"
-                    src="https://img.shields.io/github/forks/ourongxing/newsnow?logo=github&style=flat&labelColor=%23123D2A&color=%232F8F5B"
+                    src="https://img.shields.io/github/forks/cty1735/todaynews?logo=github&style=flat&labelColor=%23123D2A&color=%232F8F5B"
                   />
                 </a>
               </li>
