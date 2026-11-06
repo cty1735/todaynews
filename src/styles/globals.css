@@ -1,0 +1,87 @@
+@import url(@unocss/reset/tailwind.css);
+@import url(overlayscrollbars/overlayscrollbars.css);
+
+html,
+body,
+#app {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: 'Baloo 2';
+  src: url("/Baloo2-Bold.subset.ttf");
+}
+
+
+html {
+  color-scheme: light;
+}
+
+body {
+  --at-apply: color-base text-base;
+  background-color: #f2f6ed;
+  background-image:
+    radial-gradient(ellipse 70% 45% at 12% -8%, rgba(47, 143, 91, 0.12), rgba(255, 255, 255, 0) 70%),
+    radial-gradient(ellipse 55% 40% at 100% 0%, rgba(143, 224, 174, 0.14), rgba(255, 255, 255, 0) 70%);
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  pointer-events: all !important;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+}
+
+/* https://github.com/KingSora/OverlayScrollbars/blob/master/packages/overlayscrollbars/src/styles/themes.scss */
+.dark .os-theme-dark {
+  --os-handle-bg: rgba(255, 255, 255, 0.44);
+  --os-handle-bg-hover: rgba(255, 255, 255, 0.55);
+  --os-handle-bg-active: rgba(255, 255, 255, 0.66);
+}
+
+
+*, a, button {
+  cursor: default;
+  user-select: none;
+}
+
+#dropdown-menu li {
+  --at-apply: hover:bg-emerald-900/5 rounded-md flex items-center p-1 gap-1;
+}
+
+#dropdown-menu li > :is(a, button) {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+:focus-visible {
+  outline: 2px solid #1f6b47;
+  outline-offset: 4px;
+}
+
+::selection {
+  background: #c9e8d3;
+  color: #14301f;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+
+.grabbing * {
+  cursor: grabbing;
+}
