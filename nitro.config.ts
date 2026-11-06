@@ -39,6 +39,8 @@ const nitroOption: Parameters<typeof viteNitro>[0] = {
     dirs: ["server/utils", "shared"],
   },
   preset: "node-server",
+  // APP_BASE_PATH=/todaynews/ 时后端整个应用挂到子路径（nginx 反代不剥前缀）。
+  baseURL: process.env.APP_BASE_PATH || "/",
   alias: {
     "@shared": join(projectDir, "shared"),
     "#": join(projectDir, "server"),

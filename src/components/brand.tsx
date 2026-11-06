@@ -4,7 +4,7 @@ export function Brand({ small = false }: { small?: boolean }) {
   return (
     <Link to="/" className="group flex items-center gap-2.5" aria-label="TodayNews 首页">
       <img
-        src="/icon.svg"
+        src={withBase("icon.svg")}
         alt=""
         className={$(small ? "h-7 w-7" : "h-10 w-10", "shrink-0 transition-transform-300 group-hover:-rotate-3")}
       />

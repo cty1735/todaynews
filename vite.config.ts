@@ -13,7 +13,11 @@ dotenv.config({
   path: join(projectDir, ".env.server"),
 })
 
+// 子路径部署（如阿里云 /todaynews/）时在 .env.server 设 APP_BASE_PATH=/todaynews/
+export const appBase = process.env.APP_BASE_PATH || "/"
+
 export default defineConfig({
+  base: appBase,
   server: { port: 5188, strictPort: true, host: "127.0.0.1" },
   resolve: {
     alias: {

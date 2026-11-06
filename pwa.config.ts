@@ -38,7 +38,8 @@ const pwaOption: Partial<VitePWAOptions> = {
     ],
   },
   workbox: {
-    navigateFallbackDenylist: [/^\/api/],
+    // APP_BASE_PATH 与 vite.config.ts 保持一致；须覆盖根路径和子路径两种 API 前缀
+    navigateFallbackDenylist: [/^\/api/, /^\/todaynews\/api/],
     // sw.js 是旧版本的自销毁 SW，必须始终从网络获取，不能被预缓存
     globIgnores: ["**/sw.js"],
   },

@@ -8,6 +8,8 @@ const queryClient = new QueryClient()
 
 const router = createRouter({
   routeTree,
+  // Vite base（默认 /，子路径部署时如 /todaynews/）
+  basepath: import.meta.env.BASE_URL.replace(/\/+$/, "") || "/",
   context: {
     queryClient,
   },

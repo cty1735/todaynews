@@ -40,8 +40,14 @@ export class Timer {
 export const myFetch = $fetch.create({
   timeout: 15000,
   retry: 0,
-  baseURL: "/api",
+  // Vite base（默认 /api，子路径部署时如 /todaynews/api）
+  baseURL: `${import.meta.env.BASE_URL}api`,
 })
+
+// 拼接子路径下的静态资源（public 目录）
+export function withBase(path: string) {
+  return import.meta.env.BASE_URL + path.replace(/^\/+/, "")
+}
 
 export function isiOS() {
   return [

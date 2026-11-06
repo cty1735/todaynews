@@ -73,7 +73,7 @@ export function Sidebar() {
             >
               <span
                 className="h-5 w-5 shrink-0 rounded-full bg-cover ring-1 ring-black/5"
-                style={{ backgroundImage: `url(/icons/${id.split("-")[0]}.png)` }}
+                style={{ backgroundImage: `url(${withBase(`icons/${id.split("-")[0]}.png`)})` }}
               />
               <span className="truncate text-[12px] text-[#3d5748] group-hover:text-[#1f6b47]">{sources[id].name}</span>
               <span className="ml-auto text-[10px] text-[#a2b5a6] opacity-0 transition-opacity-200 group-hover:opacity-100">定位</span>
