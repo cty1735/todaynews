@@ -1,4 +1,12 @@
-![](/public/og-image.png)
+## 界面预览
+
+桌面版（http://127.0.0.1:5188/c/focus）：
+
+![](./screenshots/local/desktop.png)
+
+手机版：
+
+<img src="./screenshots/local/mobile.png" width="360" alt="手机版" />
 
 [English](./README.md) | 简体中文 | [日本語](README.ja-JP.md)
 
@@ -8,30 +16,14 @@
 > NewsNext（下一代 NewsNow）即将到来，快加入 [等待名单](https://tally.so/r/lbxxbo) 吧。
 
 ## 功能特性
-- 优雅的阅读界面设计，实时获取最新热点新闻
-- 支持 GitHub 登录及数据同步
-- 默认缓存时长为 30 分钟，登录用户可强制刷新获取最新数据
-- 根据内容源更新频率动态调整抓取间隔（最快每 2 分钟），避免频繁抓取导致 IP 被封禁
-- 支持 MCP server
 
-```json
-{
-  "mcpServers": {
-    "newsnow": {
-      "command": "npx",
-      "args": [
-        "-y",
-        "newsnow-mcp-server"
-      ],
-      "env": {
-        "BASE_URL": "https://newsnow.busiyi.world"
-      }
-    }
-  }
-}
-```
-
-你可以将 `BASE_URL` 修改为你的域名。
+- 浅绿“编辑部工作台”布局：左侧栏目与来源索引，右侧新闻卡片版面
+- 本地 Node 服务直接采集各平台，无示例数据、不依赖上游聚合 API
+- 栏目/卡片可单独刷新，可见页面每 2 分钟检查新数据
+- 来源搜索、关注与取消关注、拖拽排序，保存在当前浏览器
+- SQLite 缓存自动保存在 `.data/`，本地无需登录账号
+- 按来源更新频率自适应抓取间隔（最快 2 分钟），避免触发限流
+- 手机端顶部栏目导航、横向滑动卡片、内容纵向滚动
 
 ## 部署指南
 
@@ -106,10 +98,5 @@ pnpm dev
 ## License
 
 [MIT](./LICENSE) © ourongxing
-
-## 赞赏
-如果你依赖本服务，欢迎赞助以帮助它长期运行。如果需要定制或者其他帮助，也可以下列方式联系备注。
-
-![](./screenshots/reward.gif)
 
 <a href="https://hellogithub.com/repository/c2978695e74a423189e9ca2543ab3b36" target="_blank"><img src="https://api.hellogithub.com/v1/widgets/recommend.svg?rid=c2978695e74a423189e9ca2543ab3b36&claim_uid=SMJiFwlsKCkWf89&theme=small" alt="Featured｜HelloGitHub" /></a>

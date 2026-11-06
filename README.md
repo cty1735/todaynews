@@ -2,9 +2,17 @@
 
 **本地地址：http://127.0.0.1:5188/c/focus** · **[本地启动、数据机制与校验说明](本地使用说明.md)**
 
-本目录为可独立运行的本地版本：品牌名 **TodayNews**，采用浅绿“编辑部工作台”布局、新 Logo、左侧来源索引与右侧新闻版面，保留真实采集、搜索、关注和自动刷新。下方保留上游项目介绍；本地配置和启动方式以中文使用说明为准。
+本目录为可独立运行的本地版本：品牌名 **TodayNews**，采用浅绿“编辑部工作台”布局、新 Logo、左侧来源索引与右侧新闻版面，保留真实采集、搜索、关注和自动刷新。本地配置、启动方式与校验命令见[本地使用说明](本地使用说明.md)；下方上游项目文档仅作参考。
 
-![](/public/og-image.png)
+## 界面预览
+
+桌面版（http://127.0.0.1:5188/c/focus）：
+
+![](./screenshots/local/desktop.png)
+
+手机版：
+
+<img src="./screenshots/local/mobile.png" width="360" alt="手机版" />
 
 English | [简体中文](README.zh-CN.md) | [日本語](README.ja-JP.md)
 
@@ -15,30 +23,13 @@ English | [简体中文](README.zh-CN.md) | [日本語](README.ja-JP.md)
 
 ## Features
 
-- Clean and elegant UI design for optimal reading experience
-- Real-time updates on trending news
-- GitHub OAuth login with data synchronization
-- 30-minute default cache duration (logged-in users can force refresh)
-- Adaptive scraping interval (minimum 2 minutes) based on source update frequency to optimize resource usage and prevent IP bans
-- support MCP server
-
-```json
-{
-  "mcpServers": {
-    "newsnow": {
-      "command": "npx",
-      "args": [
-        "-y",
-        "newsnow-mcp-server"
-      ],
-      "env": {
-        "BASE_URL": "https://newsnow.busiyi.world"
-      }
-    }
-  }
-}
-```
-You can change the `BASE_URL` to your own domain.
+- Light-green “editorial workbench” layout: category/source index on the left, news cards on the right
+- Real-time scraping by the local Node server — no demo data and no upstream aggregation API
+- Manual refresh per column or card; visible pages check for new data every 2 minutes
+- Source search, follow/unfollow and drag-to-sort, saved in the current browser
+- SQLite cache under `.data/`, initialized automatically; no account login required locally
+- Adaptive scraping interval (minimum 2 minutes) to avoid source rate limits
+- Mobile layout with top tabs, horizontally swiped cards, vertically scrolling content
 
 ## Deployment
 
@@ -135,9 +126,3 @@ The new version is coming soon and we will no longer accept contributions
 ## License
 
 [MIT](./LICENSE) © ourongxing
-
-## Sponsorship
-
-If you rely on this service, sponsorship is welcome to help it run for the long term. If you need customization or other help, you can also use the contact method below and include a note.
-
-![](./screenshots/reward.gif)
