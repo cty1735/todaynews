@@ -113,7 +113,7 @@ For detailed instructions on how to add new sources, see [CONTRIBUTING.md](CONTR
 - Expand **data sources** to cover global news in multiple languages.
 
 **_release when ready_**
-![](https://testmnbbs.oss-cn-zhangjiakou.aliyuncs.com/pic/20250328172146_rec_.gif?x-oss-process=base_webp)
+![](./screenshots/local/search.png)
 
 ## Contributing
 
