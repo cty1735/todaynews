@@ -15,7 +15,7 @@ export const focusSourcesAtom = atom((get) => {
   })
 })
 
-export const currentColumnIDAtom = atom<FixedColumnID>("focus")
+export const currentColumnIDAtom = atom<FixedColumnID>("hottest")
 
 export const currentSourcesAtom = atom((get) => {
   const id = get(currentColumnIDAtom)

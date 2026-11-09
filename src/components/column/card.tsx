@@ -136,26 +136,30 @@ function NewsCard({ id, setHandleRef }: NewsCardProps) {
             type="button"
             aria-label={`刷新${sources[id].name}`}
             title={`刷新${sources[id].name}`}
-            className={$("cursor-pointer rounded-full p-1 transition-colors-200 hover:bg-[#e6f0e2]", isFetching && "animate-spin i-ph:circle-dashed-duotone")}
+            className={$("cursor-pointer rounded-full p-1 transition-colors-200 hover:bg-[#e6f0e2]", isFetching && "animate-spin")}
             onClick={() => refresh(id)}
           >
-            {!isFetching && <span className="i-ph:arrow-counter-clockwise-duotone block" aria-hidden="true" />}
+            <span className={$("block", isFetching ? "i-ph:circle-dashed-duotone" : "i-ph:arrow-counter-clockwise-duotone")} aria-hidden="true" />
           </button>
           <button
             type="button"
             aria-label={`${isFocused ? "取消关注" : "关注"}${sources[id].name}`}
             aria-pressed={isFocused}
             title={isFocused ? "取消关注" : "关注"}
-            className={$("cursor-pointer rounded-full p-1 transition-colors-200 hover:bg-[#e6f0e2]", isFocused ? "i-ph:star-fill" : "i-ph:star-duotone")}
+            className={$("cursor-pointer rounded-full p-1 transition-colors-200 hover:bg-[#e6f0e2]")}
             onClick={toggleFocus}
-          />
+          >
+            <span className={$("block", isFocused ? "i-ph:star-fill" : "i-ph:star-duotone")} aria-hidden="true" />
+          </button>
           {/* firefox cannot drag a button */}
           {setHandleRef && (
             <div
               ref={setHandleRef}
-              className={$("cursor-grab rounded-full p-1 transition-colors-200 hover:bg-[#e6f0e2]", "i-ph:dots-six-vertical-duotone")}
+              className={$("cursor-grab rounded-full p-1 transition-colors-200 hover:bg-[#e6f0e2]")}
               title="拖动排序"
-            />
+            >
+              <span className="i-ph:dots-six-vertical-duotone block" aria-hidden="true" />
+            </div>
           )}
         </div>
       </div>
@@ -263,13 +267,11 @@ function NewsListHot({ items }: { items: NewsItem[] }) {
             </span>
             {!!item.extra?.diff && <DiffNumber diff={item.extra.diff} />}
           </span>
-          <span className="min-w-0 text-[14px] leading-snug transition-colors-200 group-hover:text-[#1f6b47]">
-            <span className="mr-1">
-              {item.title}
-            </span>
-            <span className="text-[10px] text-[#8aa091] align-middle">
-              <ExtraInfo item={item} />
-            </span>
+          <span className="min-w-0 flex-1 text-[14px] leading-snug transition-colors-200 group-hover:text-[#1f6b47]">
+            {item.title}
+          </span>
+          <span className="shrink-0 pt-0.5 text-right text-[10px] text-[#8aa091]">
+            <ExtraInfo item={item} />
           </span>
         </a>
       ))}
