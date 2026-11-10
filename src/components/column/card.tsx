@@ -1,4 +1,5 @@
 import type { NewsItem, SourceID, SourceResponse } from "@shared/types"
+import { featuredSourceIds } from "@shared/metadata"
 import { useQuery } from "@tanstack/react-query"
 import { AnimatePresence, motion, useInView } from "framer-motion"
 import { useWindowSize } from "react-use"
@@ -20,8 +21,11 @@ interface NewsCardProps {
   setHandleRef?: (ref: HTMLElement | null) => void
 }
 
+const featuredSources = new Set<SourceID>(featuredSourceIds)
+
 export const CardWrapper = forwardRef<HTMLElement, ItemsProps>(({ id, isDragging, setHandleRef, style, ...props }, dndRef) => {
   const ref = useRef<HTMLDivElement>(null)
+  const isFeatured = featuredSources.has(id)
 
   const inView = useInView(ref, {
     once: true,
@@ -34,8 +38,10 @@ export const CardWrapper = forwardRef<HTMLElement, ItemsProps>(({ id, isDragging
       ref={ref}
       data-source={id}
       className={$(
-        "flex flex-col h-500px rounded-md p-4 cursor-default",
-        "border border-[#c9dcc9] bg-[#fbfdf8] transition-colors-200 hover:border-[#9fbea6]",
+        "flex flex-col h-500px rounded-md p-4 cursor-default transition-colors-200",
+        isFeatured
+          ? "relative border border-[#a9cdb2] bg-gradient-to-b from-[#e9f4e3] to-[#fbfdf8] shadow-[0_14px_28px_-24px_rgba(31,107,71,0.95)] hover:border-[#5f9a7a]"
+          : "border border-[#c9dcc9] bg-[#fbfdf8] hover:border-[#9fbea6]",
         isDragging && "op-40",
       )}
       style={{
@@ -44,6 +50,9 @@ export const CardWrapper = forwardRef<HTMLElement, ItemsProps>(({ id, isDragging
       }}
       {...props}
     >
+      {isFeatured && (
+        <span className="pointer-events-none absolute inset-x-0 top-0 h-[3px] rounded-t-md bg-gradient-to-r from-[#1f6b47] via-[#4f9a6d] to-[#c9a227]" aria-hidden="true" />
+      )}
       {inView && <NewsCard id={id} setHandleRef={setHandleRef} />}
     </div>
   )
@@ -102,10 +111,15 @@ function NewsCard({ id, setHandleRef }: NewsCardProps) {
   })
 
   const { isFocused, toggleFocus } = useFocusWith(id)
+  const isFeatured = featuredSources.has(id)
 
   return (
     <>
-      <div className={$("flex justify-between mb-3 pb-3 items-start border-b border-[#e0eae0]")}>
+      <div className={$(
+        "flex justify-between mb-3 pb-3 items-start border-b",
+        isFeatured ? "border-[#bfd9bf]" : "border-[#e0eae0]",
+      )}
+      >
         <div className="flex min-w-0 gap-2.5 items-center">
           <a
             className={$("w-7 h-7 shrink-0 rounded-full bg-cover ring-1 ring-black/5")}
@@ -121,11 +135,20 @@ function NewsCard({ id, setHandleRef }: NewsCardProps) {
           <span className="flex min-w-0 flex-col">
             <span className="flex items-center gap-2">
               <span
-                className="truncate text-lg font-semibold tracking-tight"
+                className={$(
+                  "truncate text-lg tracking-tight",
+                  isFeatured ? "font-bold text-[#12402a]" : "font-semibold",
+                )}
                 title={sources[id].desc}
               >
                 {sources[id].name}
               </span>
+              {isFeatured && (
+                <span className="inline-flex shrink-0 items-center gap-0.5 rounded-full bg-[#1f6b47] px-1.5 py-0.5 text-[10px] leading-none text-white" title="重点来源，已置顶">
+                  <span className="i-ph:push-pin-fill text-[10px]" aria-hidden="true" />
+                  置顶
+                </span>
+              )}
               {sources[id]?.title && <span className={$("shrink-0 font-mono text-[10px] uppercase tracking-wider text-[#2f6a4c]")}>{sources[id].title}</span>}
             </span>
             <span className="font-mono text-[10px] text-[#7c9381]"><UpdatedTime isError={isError} updatedTime={data?.updatedTime} /></span>

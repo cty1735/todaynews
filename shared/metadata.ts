@@ -38,11 +38,14 @@ const updatedSourceIds = [..._updatedSourceIds] as SourceID[]
 export const fixedColumnIds = ["focus", "hottest", "realtime", "updated"] as const satisfies Partial<ColumnID>[]
 export const hiddenColumns = Object.keys(columns).filter(id => !fixedColumnIds.includes(id as any)) as HiddenColumnID[]
 
+/** 重点来源：置顶排在最前，卡片加重样式（见 components/column/card.tsx） */
+export const featuredSourceIds: SourceID[] = ["aihot-daily", "aihot-eggs"]
+
 function getSortedSourceIds(type: "hottest" | "realtime") {
   return typeSafeObjectEntries(sources)
     .filter(([, v]) => v.type === type && !v.redirect)
     .map(([k]) => k)
-    .sort((m, n) => m.localeCompare(n))
+    .sort((m, n) => Number(featuredSourceIds.includes(n)) - Number(featuredSourceIds.includes(m)) || m.localeCompare(n))
 }
 
 export const metadata: Metadata = typeSafeObjectFromEntries(typeSafeObjectEntries(columns).map(([k, v]) => {
