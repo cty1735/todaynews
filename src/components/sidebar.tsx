@@ -61,25 +61,9 @@ export function Sidebar() {
       <div className="mt-7 flex min-h-0 flex-1 flex-col">
         {currentColumnID === "ai"
           ? (
-              <div>
-                <p className="mb-2 px-2 text-[11px] text-[#7c9381]">数据来源</p>
-                <a
-                  href="https://aihot.news"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group flex items-center gap-2.5 rounded-md px-2 py-1.5 transition-colors-200 hover:bg-[#eaf2e5]"
-                >
-                  <span
-                    className="h-5 w-5 shrink-0 rounded-full bg-cover ring-1 ring-black/5"
-                    style={{ backgroundImage: `url(${withBase("icons/aihot.png")})` }}
-                  />
-                  <span className="truncate text-[12px] text-[#3d5748] group-hover:text-[#1f6b47]">AIHOT</span>
-                  <span className="ml-auto text-[10px] text-[#a2b5a6] opacity-0 transition-opacity-200 group-hover:opacity-100">访问</span>
-                </a>
-                <p className="mt-3 px-2 text-[11px] leading-5 text-[#8aa091]">
-                  AI 日报与免费额度在右侧页面顶部切换。
-                </p>
-              </div>
+              <p className="px-2 text-[11px] leading-5 text-[#8aa091]">
+                AI 日报与免费额度在右侧页面顶部切换。
+              </p>
             )
           : (
               <>

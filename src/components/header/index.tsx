@@ -76,7 +76,7 @@ export function TopBar() {
             </h1>
             <p className="font-mono text-[10px] text-[#7c9381]">
               {currentColumnID === "ai"
-                ? "AI 日报与免费额度 · 来自 AIHOT"
+                ? "AI 日报与免费额度"
                 : `${currentSources.length} 个来源 · 每 2 分钟检查更新`}
             </p>
           </div>

@@ -40,28 +40,18 @@ export function AiColumn() {
             {item.label}
           </button>
         ))}
-        <div className="ml-auto flex items-center gap-3 pb-2.5">
-          <a
-            href={origin}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hidden font-mono text-[10px] tracking-wide text-[#8aa091] hover:text-[#1f6b47] sm:inline"
-          >
-            数据来自 AIHOT ↗
-          </a>
-          <button
-            type="button"
-            title="刷新"
-            aria-label="刷新"
-            onClick={() => queryClient.invalidateQueries({ queryKey: ["aihot"] })}
-            className="cursor-pointer text-base text-[#2f6a4c] transition-colors-200 hover:text-[#1f6b47]"
-          >
-            <span
-              className={$("i-ph:arrow-counter-clockwise-duotone", isFetching > 0 && "animate-spin i-ph:circle-dashed-duotone")}
-              aria-hidden="true"
-            />
-          </button>
-        </div>
+        <button
+          type="button"
+          title="刷新"
+          aria-label="刷新"
+          onClick={() => queryClient.invalidateQueries({ queryKey: ["aihot"] })}
+          className="ml-auto mb-2.5 cursor-pointer text-base text-[#2f6a4c] transition-colors-200 hover:text-[#1f6b47]"
+        >
+          <span
+            className={$("i-ph:arrow-counter-clockwise-duotone", isFetching > 0 && "animate-spin i-ph:circle-dashed-duotone")}
+            aria-hidden="true"
+          />
+        </button>
       </div>
 
       {tab === "daily" ? <DailyPage /> : <EggsPage />}
@@ -238,7 +228,7 @@ function EggsPage() {
         今天能领的 AI 额度
       </h2>
       <p className="mt-4 max-w-2xl text-[15px] leading-7 text-[#3d5748]">
-        AIHOT 整理的每日免费 Token 与试用额度，点条目直达领取页。
+        每天可领的免费 Token 与试用额度，点条目直达领取页。
       </p>
 
       {data.groups.map(group => (
