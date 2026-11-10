@@ -62,7 +62,7 @@ export function Sidebar() {
         {currentColumnID === "ai"
           ? (
               <p className="px-2 text-[11px] leading-5 text-[#8aa091]">
-                AI 日报与免费额度在右侧页面顶部切换。
+                AI 日报由站内科技来源自动汇总。
               </p>
             )
           : (

@@ -9,7 +9,7 @@ export default defineEventHandler(async (event) => {
   if (!path.startsWith("/api")) return
   if (["JWT_SECRET", "G_CLIENT_ID", "G_CLIENT_SECRET"].find(k => !process.env[k])) {
     event.context.disabledLogin = true
-    if (["/api/s", "/api/proxy", "/api/latest", "/api/enable-login", "/api/aihot"].every(p => !path.startsWith(p)))
+    if (["/api/s", "/api/proxy", "/api/latest", "/api/enable-login", "/api/ai"].every(p => !path.startsWith(p)))
       throw createError({ statusCode: 506, message: "Server not configured, disable login" })
   } else {
     if (["/api/s", "/api/me"].find(p => path.startsWith(p))) {

@@ -13,14 +13,14 @@ function Refresh() {
   const isAi = currentColumnID === "ai"
   const refreshAll = useCallback(() => {
     if (isAi)
-      return queryClient.invalidateQueries({ queryKey: ["aihot"] })
+      return queryClient.invalidateQueries({ queryKey: ["ai", "daily"] })
     refresh(...currentSources)
   }, [refresh, currentSources, isAi, queryClient])
 
   const isFetching = useIsFetching({
     predicate: (query) => {
       if (isAi)
-        return query.queryKey[0] === "aihot"
+        return query.queryKey[0] === "ai"
       const [type, id] = query.queryKey as ["source" | "entire", SourceID]
       return (type === "source" && currentSources.includes(id)) || type === "entire"
     },
@@ -76,7 +76,7 @@ export function TopBar() {
             </h1>
             <p className="font-mono text-[10px] text-[#7c9381]">
               {currentColumnID === "ai"
-                ? "AI 日报与免费额度"
+                ? "站内科技来源自动汇总"
                 : `${currentSources.length} 个来源 · 每 2 分钟检查更新`}
             </p>
           </div>

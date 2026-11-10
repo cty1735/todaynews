@@ -110,45 +110,22 @@ export interface SourceResponse {
   info?: any
 }
 
-/** AIHOT 条目：日报与 24h 动态共用 */
-export interface AiNewsEntry {
-  title?: string
-  summary?: string
-  leadParagraph?: string
-  source?: { name?: string }
-  links?: { aihot?: string, original?: string }
-  publishedAt?: string
-}
-
-export interface AiDailyReport {
-  date: string
-  generatedAt?: string
-  links?: { aihot?: string }
-  lead?: AiNewsEntry
-  highlights?: AiNewsEntry[]
-  sections?: Array<{ label: string, items: AiNewsEntry[] }>
-  flashes?: AiNewsEntry[]
-}
-
-export interface AiDailyData {
-  updatedAt: number
-  report?: AiDailyReport
-  items: AiNewsEntry[]
-}
-
-export interface AiEggItem {
+/** AI 日报条目（由站内科技来源聚合） */
+export interface AiDigestItem {
   title: string
   url: string
-  amount?: string
-  note?: string
+  source?: string
+  publishedAt?: number
 }
 
-export interface AiEggGroup {
+export interface AiDigestSection {
   label: string
-  items: AiEggItem[]
+  items: AiDigestItem[]
 }
 
-export interface AiEggData {
+export interface AiDigestData {
   updatedAt: number
-  groups: AiEggGroup[]
+  date: string
+  total: number
+  sections: AiDigestSection[]
 }
