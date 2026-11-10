@@ -109,3 +109,46 @@ export interface SourceResponse {
   items: NewsItem[]
   info?: any
 }
+
+/** AIHOT 条目：日报与 24h 动态共用 */
+export interface AiNewsEntry {
+  title?: string
+  summary?: string
+  leadParagraph?: string
+  source?: { name?: string }
+  links?: { aihot?: string, original?: string }
+  publishedAt?: string
+}
+
+export interface AiDailyReport {
+  date: string
+  generatedAt?: string
+  links?: { aihot?: string }
+  lead?: AiNewsEntry
+  highlights?: AiNewsEntry[]
+  sections?: Array<{ label: string, items: AiNewsEntry[] }>
+  flashes?: AiNewsEntry[]
+}
+
+export interface AiDailyData {
+  updatedAt: number
+  report?: AiDailyReport
+  items: AiNewsEntry[]
+}
+
+export interface AiEggItem {
+  title: string
+  url: string
+  amount?: string
+  note?: string
+}
+
+export interface AiEggGroup {
+  label: string
+  items: AiEggItem[]
+}
+
+export interface AiEggData {
+  updatedAt: number
+  groups: AiEggGroup[]
+}

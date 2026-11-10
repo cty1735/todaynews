@@ -23,14 +23,16 @@ export function MobileNav() {
           {metadata[columnId].name}
         </Link>
       ))}
-      <button
-        type="button"
-        onClick={() => toggle(true)}
-        className="ml-auto flex shrink-0 cursor-pointer items-center gap-1 whitespace-nowrap pb-1 text-[13px] text-[#2f6a4c]"
-      >
-        <span className="i-ph:plus" aria-hidden="true" />
-        来源
-      </button>
+      {currentId !== "ai" && (
+        <button
+          type="button"
+          onClick={() => toggle(true)}
+          className="ml-auto flex shrink-0 cursor-pointer items-center gap-1 whitespace-nowrap pb-1 text-[13px] text-[#2f6a4c]"
+        >
+          <span className="i-ph:plus" aria-hidden="true" />
+          来源
+        </button>
+      )}
     </nav>
   )
 }

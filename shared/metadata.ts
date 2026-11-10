@@ -4,6 +4,9 @@ import { updatedSourceIds as _updatedSourceIds } from "./updated-sources"
 import type { ColumnID, HiddenColumnID, Metadata, SourceID } from "./types"
 
 export const columns = {
+  ai: {
+    zh: "AI",
+  },
   china: {
     zh: "国内",
   },
@@ -35,7 +38,7 @@ export const columns = {
 
 const updatedSourceIds = [..._updatedSourceIds] as SourceID[]
 
-export const fixedColumnIds = ["focus", "hottest", "realtime", "updated"] as const satisfies Partial<ColumnID>[]
+export const fixedColumnIds = ["ai", "focus", "hottest", "realtime", "updated"] as const satisfies Partial<ColumnID>[]
 export const hiddenColumns = Object.keys(columns).filter(id => !fixedColumnIds.includes(id as any)) as HiddenColumnID[]
 
 /** 重点来源：置顶排在最前，卡片加重样式（见 components/column/card.tsx） */
@@ -54,6 +57,12 @@ export const metadata: Metadata = typeSafeObjectFromEntries(typeSafeObjectEntrie
       return [k, {
         name: v.zh,
         sources: ["baidu", "bilibili-hot-search", "weibo", "zhihu", "wallstreetcn-hot", "cls-telegraph", "thepaper", "ithome", "github-trending-today"] as SourceID[],
+      }]
+    case "ai":
+      // AI 栏目走独立的日报/鸡蛋页面，不渲染来源卡片
+      return [k, {
+        name: v.zh,
+        sources: [] as SourceID[],
       }]
     case "hottest":
       return [k, {

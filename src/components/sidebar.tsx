@@ -59,35 +59,61 @@ export function Sidebar() {
       </nav>
 
       <div className="mt-7 flex min-h-0 flex-1 flex-col">
-        <div className="mb-2 flex items-center justify-between px-2">
-          <p className="text-[11px] text-[#7c9381]">来源 · {currentSources.length}</p>
-        </div>
-        <div className="-mr-1 min-h-0 flex-1 overflow-y-auto pr-1">
-          {currentSources.map(id => (
-            <button
-              key={id}
-              type="button"
-              onClick={() => scrollToSource(id)}
-              title={`定位到${sources[id].name}`}
-              className="group flex w-full cursor-pointer items-center gap-2.5 rounded-md px-2 py-1.5 text-left transition-colors-200 hover:bg-[#eaf2e5]"
-            >
-              <span
-                className="h-5 w-5 shrink-0 rounded-full bg-cover ring-1 ring-black/5"
-                style={{ backgroundImage: `url(${withBase(`icons/${id.split("-")[0]}.png`)})` }}
-              />
-              <span className="truncate text-[12px] text-[#3d5748] group-hover:text-[#1f6b47]">{sources[id].name}</span>
-              <span className="ml-auto text-[10px] text-[#a2b5a6] opacity-0 transition-opacity-200 group-hover:opacity-100">定位</span>
-            </button>
-          ))}
-        </div>
-        <button
-          type="button"
-          onClick={() => toggle(true)}
-          className="mt-3 flex w-full cursor-pointer items-center justify-center gap-1.5 rounded-md border border-dashed border-[#b9cfb9] py-2 text-xs text-[#2f6a4c] transition-colors-200 hover:border-[#8db39a] hover:bg-[#eaf2e5]"
-        >
-          <span className="i-ph:plus" aria-hidden="true" />
-          添加新闻来源
-        </button>
+        {currentColumnID === "ai"
+          ? (
+              <div>
+                <p className="mb-2 px-2 text-[11px] text-[#7c9381]">数据来源</p>
+                <a
+                  href="https://aihot.news"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group flex items-center gap-2.5 rounded-md px-2 py-1.5 transition-colors-200 hover:bg-[#eaf2e5]"
+                >
+                  <span
+                    className="h-5 w-5 shrink-0 rounded-full bg-cover ring-1 ring-black/5"
+                    style={{ backgroundImage: `url(${withBase("icons/aihot.png")})` }}
+                  />
+                  <span className="truncate text-[12px] text-[#3d5748] group-hover:text-[#1f6b47]">AIHOT</span>
+                  <span className="ml-auto text-[10px] text-[#a2b5a6] opacity-0 transition-opacity-200 group-hover:opacity-100">访问</span>
+                </a>
+                <p className="mt-3 px-2 text-[11px] leading-5 text-[#8aa091]">
+                  AI 日报与免费额度在右侧页面顶部切换。
+                </p>
+              </div>
+            )
+          : (
+              <>
+                <div className="mb-2 flex items-center justify-between px-2">
+                  <p className="text-[11px] text-[#7c9381]">来源 · {currentSources.length}</p>
+                </div>
+                <div className="-mr-1 min-h-0 flex-1 overflow-y-auto pr-1">
+                  {currentSources.map(id => (
+                    <button
+                      key={id}
+                      type="button"
+                      onClick={() => scrollToSource(id)}
+                      title={`定位到${sources[id].name}`}
+                      className="group flex w-full cursor-pointer items-center gap-2.5 rounded-md px-2 py-1.5 text-left transition-colors-200 hover:bg-[#eaf2e5]"
+                    >
+                      <span
+                        className="h-5 w-5 shrink-0 rounded-full bg-cover ring-1 ring-black/5"
+                        style={{ backgroundImage: `url(${withBase(`icons/${id.split("-")[0]}.png`)})` }}
+                      />
+                      <span className="truncate text-[12px] text-[#3d5748] group-hover:text-[#1f6b47]">{sources[id].name}</span>
+                      <span className="ml-auto text-[10px] text-[#a2b5a6] opacity-0 transition-opacity-200 group-hover:opacity-100">定位</span>
+                    </button>
+                  ))}
+                </div>
+                <button
+                  type="button"
+                  onClick={() => toggle(true)}
+                  className="mt-3 flex w-full cursor-pointer items-center justify-center gap-1.5 rounded-md border border-dashed border-[#b9cfb9] py-2 text-xs text-[#2f6a4c] transition-colors-200 hover:border-[#8db39a] hover:bg-[#eaf2e5]"
+                >
+                  <span className="i-ph:plus" aria-hidden="true" />
+                  添加新闻来源
+                </button>
+              </>
+            )}
       </div>
 
       <p className="mt-4 border-t border-[#dfe9df] pt-4 font-mono text-[10px] text-[#839889]">

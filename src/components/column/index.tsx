@@ -1,6 +1,7 @@
 import type { FixedColumnID } from "@shared/types"
 import { useTitle } from "react-use"
 import { Dnd } from "./dnd"
+import { AiColumn } from "../ai"
 import { currentColumnIDAtom } from "~/atoms"
 
 export function Column({ id }: { id: FixedColumnID }) {
@@ -10,6 +11,9 @@ export function Column({ id }: { id: FixedColumnID }) {
   }, [id, setCurrentColumnID])
 
   useTitle(`TodayNews | ${metadata[id].name}`)
+
+  if (id === "ai")
+    return <AiColumn />
 
   return (
     <>

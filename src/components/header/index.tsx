@@ -1,4 +1,4 @@
-import { useIsFetching } from "@tanstack/react-query"
+import { useIsFetching, useQueryClient } from "@tanstack/react-query"
 import type { SourceID } from "@shared/types"
 import { Brand } from "../brand"
 import { Menu } from "./menu"
@@ -6,12 +6,21 @@ import { MobileNav } from "../navbar"
 import { currentColumnIDAtom, currentSourcesAtom } from "~/atoms"
 
 function Refresh() {
+  const currentColumnID = useAtomValue(currentColumnIDAtom)
   const currentSources = useAtomValue(currentSourcesAtom)
   const { refresh } = useRefetch()
-  const refreshAll = useCallback(() => refresh(...currentSources), [refresh, currentSources])
+  const queryClient = useQueryClient()
+  const isAi = currentColumnID === "ai"
+  const refreshAll = useCallback(() => {
+    if (isAi)
+      return queryClient.invalidateQueries({ queryKey: ["aihot"] })
+    refresh(...currentSources)
+  }, [refresh, currentSources, isAi, queryClient])
 
   const isFetching = useIsFetching({
     predicate: (query) => {
+      if (isAi)
+        return query.queryKey[0] === "aihot"
       const [type, id] = query.queryKey as ["source" | "entire", SourceID]
       return (type === "source" && currentSources.includes(id)) || type === "entire"
     },
@@ -66,7 +75,9 @@ export function TopBar() {
               {metadata[currentColumnID].name}
             </h1>
             <p className="font-mono text-[10px] text-[#7c9381]">
-              {currentSources.length} 个来源 · 每 2 分钟检查更新
+              {currentColumnID === "ai"
+                ? "AI 日报与免费额度 · 来自 AIHOT"
+                : `${currentSources.length} 个来源 · 每 2 分钟检查更新`}
             </p>
           </div>
         </div>
