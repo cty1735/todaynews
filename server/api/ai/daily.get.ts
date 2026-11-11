@@ -1,3 +1,3 @@
-import { getAiDigest } from "#/utils/ai-digest"
+import { getDailyData } from "#/utils/ai-news"
 
-export default defineEventHandler(async () => await getAiDigest())
+export default defineEventHandler(() => getDailyData())

@@ -1,0 +1,394 @@
+[
+  {
+    "label": "每天都能领",
+    "items": [
+      {
+        "title": "豆包电脑版每天签到领 200 额度",
+        "url": "https://mp.weixin.qq.com/s?__biz=MzkzMTY2MzMzMQ%3D%3D&mid=2247486879&idx=1&sn=0f55124545d18969d471854997a40521",
+        "amount": "200 额度",
+        "desc": "豆包电脑版和豆包工作电脑版里的非 Pro 模型与工作能力，如豆包 2.1 Turbo；不含生视频、Pro 模型，也不是开放平台 API 余额",
+        "note": "部分模型 · 限产品内使用 · 仅电脑端 · 不含 Pro · 不含视频生成 · 11月8日核实"
+      },
+      {
+        "title": "华为果办 OfficeAce 免费版每日登录送 100 积分",
+        "url": "https://activity.huaweicloud.com/officeace.html#section-3",
+        "amount": "100 积分",
+        "desc": "果办平台预置模型，如 GLM-5.2",
+        "note": "部分模型 · 限产品内使用 · 客户端或微信小程序 · 限时活动 · 11月10日核实"
+      },
+      {
+        "title": "秒悟每天登录领 2000 积分",
+        "url": "https://docs.meoo.com/pricing",
+        "amount": "2000 积分",
+        "desc": "秒悟提供的语言、图像等模型",
+        "note": "所有模型 · 限产品内使用 · 11月11日核实"
+      },
+      {
+        "title": "魔搭社区每天送 200 魔粒调模型 API",
+        "url": "https://www.modelscope.cn/posts/435591",
+        "amount": "200 魔粒",
+        "desc": "API-Inference 上的所有模型，即模型页带蓝绿色闪电标记的开源模型；老模型会陆续下架",
+        "note": "所有模型 · 要实名 · 要绑阿里云账号 · 需验证邮箱 · 11月11日核实"
+      },
+      {
+        "title": "商汤小浣熊免费版每天送 300 积分",
+        "url": "https://doc.xiaohuanxiong.com/zh-hans/saas-user/user_manual/office_app/points_rules.html",
+        "amount": "300 积分",
+        "desc": "小浣熊免费版可选的内置模型，如 DeepSeek V4.1 Flash",
+        "note": "部分模型 · 限产品内使用 · 11月11日核实"
+      },
+      {
+        "title": "腾讯 ima 每日签到领 50 算力",
+        "url": "https://ima.qq.com/download",
+        "amount": "50 算力",
+        "desc": "ima Copilot 内置模型，如 DeepSeek 系列，具体可选项以客户端为准",
+        "note": "部分模型 · 限产品内使用 · 客户端签到 · 11月9日核实"
+      },
+      {
+        "title": "ACE Music 每天 20 积分，最多生成 10 首歌",
+        "url": "https://acemusic.ai/pricing/",
+        "amount": "20 积分",
+        "desc": "所有模型，包括 ACE Music v1、ACE Music v1.1 Preview 和 ACE-Step v1.5",
+        "note": "所有模型 · 限产品内使用 · v1 系列不可下载 · v1 系列限非商用 · 11月11日核实"
+      },
+      {
+        "title": "AStudio 体验版每天登录领 100 积分",
+        "url": "https://agent.xfyun.cn/studio-guide/pricing",
+        "amount": "100 积分",
+        "desc": "体验版可选的内置模型，官方列有 Spark、DeepSeek、GLM、Kimi、MiniMax 等系列；不含第三方独立服务",
+        "note": "所有模型 · 限产品内使用 · 仅电脑端 · Mac 需苹果芯片 · 11月11日核实"
+      },
+      {
+        "title": "Cloudflare Workers AI 每天免费 1 万 Neurons",
+        "url": "https://developers.cloudflare.com/workers-ai/platform/pricing/",
+        "amount": "1 万 Neurons",
+        "desc": "Qwen3.8-27B、GPT-OSS 120B/20B、Gemma 4 26B、Llama 4 Scout、BGE-M3 等；不含 Kimi K2.6/K2.7 Code、GLM-5.2/5.3/5.3 Flash、DeepSeek V4 Flash 0731/V4.1 Flash 1017/V4 Pro 0813",
+        "note": "部分模型 · 免费计划超额即停 · 11月11日核实"
+      },
+      {
+        "title": "MiniMax Code 每天签到领 400 积分",
+        "url": "https://agent.minimax.cn/docs/code/account/usage",
+        "amount": "400 积分",
+        "desc": "MiniMax Code 里平台支持的所有文本和多模态模型",
+        "note": "所有模型 · 限产品内使用 · 仅电脑端 · 11月11日核实"
+      },
+      {
+        "title": "Qoder 每天 10 点领 100 Credits",
+        "url": "https://docs.qoder.cn/events/100credits",
+        "amount": "100 Credits",
+        "desc": "Qoder CN 里的所有模型（通用 Credits），各功能按账号权益开放",
+        "note": "所有模型 · 限产品内使用 · 仅电脑端 · 仅个人账号 · 11月11日核实"
+      },
+      {
+        "title": "TRAE 每天签到领 100 积分",
+        "url": "https://docs.trae.cn/ide_plans-and-billing",
+        "amount": "100 积分",
+        "desc": "TRAE 里的所有内置模型，如 GLM-5.3、DeepSeek-V4-Pro 等；Seed-Evolving 只给会员用",
+        "note": "所有模型 · 限产品内使用 · 仅电脑端 · 11月11日核实"
+      },
+      {
+        "title": "WorkBuddy 每天领 100 积分",
+        "url": "https://www.workbuddy.cn/",
+        "amount": "100 积分",
+        "desc": "WorkBuddy 内置模型；加入 Buddy One 后也可用于已关联的腾讯文档、ima、腾讯网盘 AI 功能",
+        "note": "所有模型 · 限产品内使用 · 仅电脑端 · 11月8日核实"
+      },
+      {
+        "title": "WPS 灵犀签到领 100 智点，第 7 天起每天 200",
+        "url": "https://www.lingxi.cn/docs#06-credits--%E6%99%BA%E7%82%B9%E8%AF%B4%E6%98%8E",
+        "amount": "100 智点",
+        "desc": "灵犀专业版体验版的专家 Pro、Max 模式，由灵犀按任务选择内置模型",
+        "note": "部分模型 · 限产品内使用 · 11月11日核实"
+      }
+    ]
+  },
+  {
+    "label": "每月都能领",
+    "items": [
+      {
+        "title": "Rime 每月 50 美元语音模型额度",
+        "url": "https://www.rime.ai/pricing",
+        "amount": "≈¥334",
+        "note": "所有模型 · 无需绑卡 · 限商业用途 · 限评估和开发 · 年满 18 岁 · 11月11日核实"
+      },
+      {
+        "title": "Drex 每月 5 美元模型调用额度",
+        "url": "https://console.nace.ai/docs/drex/reference/pricing",
+        "amount": "≈¥33",
+        "desc": "所有模型：Drex 决策系列（含 Max v1.1、Max Finance、2.0）、文档理解与 Drex Search，共用账户余额",
+        "note": "所有模型 · 注册满一个月 · 真人账号认证 · 可免绑卡 · 免费发放有限额 · 11月11日核实"
+      },
+      {
+        "title": "LiveKit 每月送 2.50 美元模型推理额度",
+        "url": "https://livekit.com/pricing",
+        "amount": "≈¥17",
+        "desc": "LiveKit Inference 支持的模型，如 Gemma 4 31B、DeepSeek V4.1 Flash、GPT-6.1 Sol、Deepgram Flux、Cartesia Sonic 3.6；自带厂商 API Key 的插件费用不抵扣",
+        "note": "部分模型 · 无需绑卡 · 需开发接入 · 11月11日核实"
+      },
+      {
+        "title": "蚂蚁百灵每月 1 日送 10 元抵扣券",
+        "url": "https://developer.ant-ling.com/zh-CN/docs/getting-started/changelog/billing-upgrade/",
+        "amount": "¥10",
+        "desc": "百灵开放平台上的所有模型，按各模型实际计费金额抵扣",
+        "note": "所有模型 · 新计费平台 · 月中升级不补发 · 11月11日核实"
+      },
+      {
+        "title": "EdgeOne Makers 每月 50 万 Token",
+        "url": "https://pages.edgeone.ai/zh/document/limits-and-quotas",
+        "amount": "≈¥0.3",
+        "desc": "内置 DeepSeek V4 Pro／V4 Flash／V4.1 Flash、Kimi K2.6、MiniMax M3／M2.7、混元 Hy3／Hy3 Preview、朱雀；自带厂商密钥的模型不使用此额度",
+        "note": "部分模型 · 仅限技术验证 · 账号共享额度 · 自接密钥另收费 · 11月11日核实"
+      },
+      {
+        "title": "书生·端砚测试期每月送免费墨点",
+        "url": "https://discovery.intern-ai.org.cn/token-plan/home",
+        "amount": "免费",
+        "desc": "Token Plan 所有模型，如 DeepSeek-V4.1-Flash-1017、GLM-5.3、Qwen3.8-27B；Agents-A1、Atria-Dawn、Sage-A1.5、书生-S2 当前免扣墨点",
+        "note": "所有模型 · 测试期福利 · 额度以账户为准 · 11月9日核实"
+      },
+      {
+        "title": "腾讯云 ADP 体验版每月送 15,000 PU",
+        "url": "https://cloud.tencent.com/document/product/1759/139268",
+        "amount": "1.5 万 PU",
+        "desc": "ADP 体验版的 Auto 模型，不含自定义模型与专属算力",
+        "note": "部分模型 · 要实名 · 限产品内使用 · 腾讯云主账号 · 11月11日核实"
+      },
+      {
+        "title": "ElevenLabs 免费档每月 1 万积分",
+        "url": "https://elevenlabs.io/pricing",
+        "amount": "1 万 积分",
+        "desc": "Eleven v4、v4 Turbo、v3 等免费档语音模型，以及转写、音效和音乐功能；不含视频生成、付费档专属声音克隆或商业授权",
+        "note": "部分模型 · 不可商用 · 公开发布须署名 · 不含视频生成 · 11月11日核实"
+      },
+      {
+        "title": "TRAE 国内版每月 500 积分",
+        "url": "https://www.trae.cn/pricing",
+        "amount": "500 积分",
+        "desc": "TRAE 里的所有内置模型，如 GLM-5.3、DeepSeek-V4-Pro 等；Seed-Evolving 只给会员用",
+        "note": "所有模型 · 限产品内使用 · 仅电脑端 · 11月11日核实"
+      },
+      {
+        "title": "WorkBuddy 体验版每月 500 积分",
+        "url": "https://www.workbuddy.cn/docs/workbuddy/Pricing",
+        "amount": "500 积分",
+        "desc": "WorkBuddy 和 CodeBuddy 内置模型；加入 Buddy One 后也可用于已关联的腾讯文档、ima、腾讯网盘 AI 功能",
+        "note": "所有模型 · 限产品内使用 · 仅电脑端 · 11月11日核实"
+      },
+      {
+        "title": "Zed 在读大学生每月 10 美元 AI 额度，持续一年",
+        "url": "https://zed.dev/education",
+        "amount": "≈¥67",
+        "desc": "Zed 托管模型中学生档可用的部分，如 Claude Sonnet 5.5、GPT-6.1 Sol；不含 Claude Fable、Claude Opus、GPT-6 Astra、GPT-5.5 pro 和 GPT-5.4 pro；不是通用 API 余额",
+        "note": "部分模型 · 仅在读学生 · 限产品内使用 · 仅电脑端 · 学校邮箱验证 · GitHub 30 天+ · 11月11日核实"
+      }
+    ]
+  },
+  {
+    "label": "其他福利",
+    "items": [
+      {
+        "title": "华为码道受邀注册额外领 1000 积分",
+        "url": "https://support.huaweicloud.com/offers-codeartsagent/codeartsagent_offers_0002.html",
+        "amount": "1000 积分",
+        "desc": "码道内置模型，包括 Kimi K3.1 Pro、GLM-5.3-Flash、DeepSeek V4.1 Flash；仅在码道各端使用，不是通用 API 余额",
+        "note": "所有模型 · 限产品内使用 · 需好友邀请 · 首次使用码道 · 积分制套餐 · 11月11日核实"
+      },
+      {
+        "title": "智谱 AutoClaw 国内版双十一登录领 5000 万 Tokens",
+        "url": "https://autoclaw.zhipuai.cn/blog/news/M11W2/",
+        "amount": "5000 万 Token",
+        "desc": "AutoClaw 所有内置 GLM 模型，如 GLM-5.3、GLM-5.3-Flash、GLM-5-Turbo、GLM-5V-Turbo 及 Auto 模式；自接 API 另计费",
+        "note": "所有模型 · 要实名 · 限产品内使用 · 仅电脑端 · 国内版账号 · 每账号一次 · 11月11日核实"
+      },
+      {
+        "title": "MiniMax Code 限时免费生成 10 张 H3 Image 图片",
+        "url": "https://agent.minimax.cn/",
+        "amount": "10 张",
+        "desc": "MiniMax H3 Image 图像生成（任意规格）",
+        "note": "部分模型 · 限产品内使用 · 用完后消耗额度 · 11月11日核实"
+      },
+      {
+        "title": "StepAudio 3 四款预览模型限时免费调用",
+        "url": "https://platform.stepfun.com/docs/zh/guides/pricing/details",
+        "amount": "免费",
+        "desc": "stepaudio-3-realtime-preview、stepaudio-3-chat-preview、stepaudio-3-gen-preview、stepaudio-3-music-preview；不含 TTS、独立 ASR、音色复刻与音色设计",
+        "note": "部分模型 · 要实名 · TTS、ASR 收费 · 音色服务另收费 · 11月11日核实"
+      },
+      {
+        "title": "WorkBuddy／CodeBuddy Hy4 限时免费额度",
+        "url": "https://www.tencent.com/zh-cn/tencent-launches-hy4-joining-the-ranks-of-the-worlds-leading-open-source-ai-models/",
+        "amount": "免费",
+        "desc": "WorkBuddy／CodeBuddy 内的 Hy4；其他模型及腾讯云 TokenHub API 按各自规则计费",
+        "note": "部分模型 · 限产品内使用 · 仅电脑端 · 免费额度有限 · 超额留意积分 · 11月11日核实"
+      },
+      {
+        "title": "超算互联网新用户领 1 亿 Token",
+        "url": "https://www.scnet.cn/home/subject/double11/index.html",
+        "amount": "≈¥60",
+        "desc": "首期默认 GLM-5.3-Flash；实际发放型号可能调整，以到账为准",
+        "note": "部分模型 · 要实名 · 客户端领取 · 每日限量 · 用完扣现金余额 · 到 12月31日 · 11月11日核实"
+      },
+      {
+        "title": "Drex 新人 5 美元模型调用额度",
+        "url": "https://console.nace.ai/docs/drex/reference/pricing",
+        "amount": "≈¥33",
+        "desc": "所有模型：Drex 决策系列（含 Max v1.1、Max Finance、2.0）、文档理解与 Drex Search，共用账户余额",
+        "note": "所有模型 · 新人专享 · 真人账号认证 · 可免绑卡 · 免费发放有限额 · 11月11日核实"
+      },
+      {
+        "title": "Zed 14 天试用领 5 美元模型额度",
+        "url": "https://zed.dev/docs/account/plans-and-pricing",
+        "amount": "≈¥33",
+        "desc": "GPT-6 Luna；试用期不含其他托管模型",
+        "note": "部分模型 · 限产品内使用 · 仅电脑端 · 11月11日核实"
+      },
+      {
+        "title": "百度千帆新用户送 20 元代金券",
+        "url": "https://cloud.baidu.com/campaign/event/bigevent/index.html",
+        "amount": "¥20",
+        "desc": "千帆平台上的所有模型，官方写“全平台无门槛使用”",
+        "note": "所有模型 · 要实名 · 到 11月30日 · 11月11日核实"
+      },
+      {
+        "title": "蚂蚁百灵新用户或升级账户送 20 元",
+        "url": "https://developer.ant-ling.com/zh-CN/docs/getting-started/changelog/billing-upgrade/",
+        "amount": "¥20",
+        "desc": "升级券可用于百灵全部模型；新人券官方没单独写范围，以控制台为准",
+        "note": "11月11日核实"
+      },
+      {
+        "title": "硅基流动实名认证送 16 元代金券",
+        "url": "https://www.siliconflow.cn/news/od7wj9rr23p95uhihmhrombp",
+        "amount": "¥16",
+        "desc": "平台上的所有模型，含 Pro 模型和高速模型；API、批量推理、微调都能用",
+        "note": "所有模型 · 要实名 · 到 12月31日 · 11月11日核实"
+      },
+      {
+        "title": "阿里云百炼新人各模型通常送 100 万 Token",
+        "url": "https://help.aliyun.com/zh/model-studio/new-free-quota",
+        "amount": "≈¥7.1 起",
+        "desc": "北京地域的部分模型，每个（含快照版本）各一份，如 qwen3.8-max、deepseek-v4-pro、kimi-k3；qwen3.6-plus、qwen-plus 等不送",
+        "note": "部分模型 · 要实名 · 只限北京地域 · 需通用 API Key · 用完自动转付费 · 11月11日核实"
+      },
+      {
+        "title": "超算互联网新用户领 1000 万 Token",
+        "url": "https://www.scnet.cn/home/subject/maas/index.html",
+        "amount": "≈¥6",
+        "desc": "当前为 GLM-5.3-Flash；实际发放型号可能调整，以到账为准",
+        "note": "部分模型 · 要实名 · 限量先到先得 · 用完扣现金余额 · 型号可能调整 · 到 12月31日 · 11月11日核实"
+      },
+      {
+        "title": "DeepSeek Harness 登录送 6 元",
+        "url": "https://deepseek.com/zh/harness/",
+        "amount": "¥6",
+        "desc": "DeepSeek 开放平台的所有模型，即 deepseek-flash 和 deepseek-v4-pro",
+        "note": "所有模型 · 仅电脑端 · +86 手机号 · 限量 · 11月8日核实"
+      },
+      {
+        "title": "TokenHub 新人语言与多模态模型送 100 万 Token",
+        "url": "https://cloud.tencent.com/document/product/1823/130053",
+        "amount": "≈¥2.4",
+        "desc": "语言模型和多模态理解模型标注 100 万 Token；官方对是否共享的表述不一致，以控制台为准；视觉生成另有额度",
+        "note": "部分模型 · 要实名 · 额度以控制台为准 · 到 12月31日 · 11月11日核实"
+      },
+      {
+        "title": "火山方舟新用户每个文本模型送 50 万 Token",
+        "url": "https://docs.volcengine.com/docs/ark/free-inference-quota",
+        "amount": "≈¥1.2 起",
+        "desc": "方舟的文本模型，每个各 50 万 Token；仅用于按 Token 后付费的在线推理，不含图像、视频生成的其他额度",
+        "note": "部分模型 · 仅在线推理 · 不含插件和存储 · 11月11日核实"
+      },
+      {
+        "title": "豆包电脑版新用户领 30 天免费体验",
+        "url": "https://mp.weixin.qq.com/s?__biz=MzkzMTY2MzMzMQ%3D%3D&mid=2247486879&idx=1&sn=0f55124545d18969d471854997a40521",
+        "amount": "免费",
+        "desc": "豆包电脑版和豆包工作电脑版里的非 Pro 模型与工作能力，如豆包 2.1 Turbo；不含生视频、Pro 模型，也不是开放平台 API 余额",
+        "note": "部分模型 · 限产品内使用 · 仅电脑端 · 不含 Pro · 不含视频生成 · 11月8日核实"
+      },
+      {
+        "title": "秒悟新用户首月 5000 积分",
+        "url": "https://docs.meoo.com/pricing",
+        "amount": "5000 积分",
+        "desc": "秒悟提供的语言、图像等模型",
+        "note": "所有模型 · 限产品内使用 · 11月11日核实"
+      },
+      {
+        "title": "微信小程序送 10 亿 Token 与 10 万张生图",
+        "url": "https://docs.cloudbase.net/ai/ai-inspire-plan",
+        "amount": "10 亿 Token",
+        "desc": "hy4、hy4-preview（12 月 7 日 0 点下线）、hy3、deepseek-v4.1-flash、deepseek-v4.1-flash-1017；生图用 HY-Image-3.0-Plus-4090-Tob-v1.0、HY-Image-v3.0-I2I-ToB-v1.0.1（12 月 1 日 0 点下线）",
+        "note": "部分模型 · 要实名 · 限产品内使用 · 需微信小程序账号 · 仅限云开发内使用 · Token 用完扣套餐 · 文生图 · 图生图 · 到 12月31日 · 11月11日核实"
+      },
+      {
+        "title": "AStudio 新用户下载登录领 1000 积分",
+        "url": "https://agent.xfyun.cn/studio-guide/pricing",
+        "amount": "1000 积分",
+        "desc": "体验版可选的内置模型，官方列有 Spark、DeepSeek、GLM、Kimi、MiniMax 等系列；不含第三方独立服务",
+        "note": "所有模型 · 限产品内使用 · 仅电脑端 · Mac 需苹果芯片 · 11月11日核实"
+      },
+      {
+        "title": "Qoder 新人 300 Credits 加两周 Pro",
+        "url": "https://docs.qoder.cn/product-overview/billing-description",
+        "amount": "300 Credits",
+        "desc": "Qoder CN 里的所有模型；高级模型要在 14 天 Pro 试用期内用",
+        "note": "所有模型 · 限产品内使用 · 仅电脑端 · 11月11日核实"
+      },
+      {
+        "title": "TRAE 国内版新用户注册送 2000 积分",
+        "url": "https://docs.trae.cn/ide_plans-and-billing",
+        "amount": "2000 积分",
+        "desc": "TRAE 里的所有内置模型，如 GLM-5.3、DeepSeek-V4-Pro 等；Seed-Evolving 只给会员用",
+        "note": "所有模型 · 限产品内使用 · 仅电脑端 · 11月11日核实"
+      },
+      {
+        "title": "WorkBuddy 关联 Buddy One 送 100 积分",
+        "url": "https://www.workbuddy.cn/buddyone/",
+        "amount": "100 积分",
+        "desc": "WorkBuddy 的所有内置模型，以及已关联的腾讯文档、ima、腾讯网盘 AI 功能；自定义模型由第三方另行计费",
+        "note": "所有模型 · 限产品内使用 · 仅电脑端 · 暂不支持解绑 · 11月11日核实"
+      },
+      {
+        "title": "ZCode 新用户 5 天体验，每天 800 万 Token",
+        "url": "https://zcode.z.ai/cn/docs/configuration",
+        "amount": "免费",
+        "desc": "GLM-5.3（每天 300 万）和 GLM-5.3-Flash（每天 500 万），各算各的",
+        "note": "部分模型 · 限产品内使用 · 仅电脑端 · 两模型独立分额 · 11月11日核实"
+      },
+      {
+        "title": "阿里云在读学生领 300 元模型抵扣金",
+        "url": "https://help.aliyun.com/zh/model-studio/introduction-to-yungongkaiwu",
+        "amount": "¥300",
+        "desc": "百炼大模型推理，Wan、HappyHorse 和 Omni 除外",
+        "note": "部分模型 · 仅在读学生 · 要实名 · 超额按量收费 · 每日限量 · 到 2027年3月31日 · 11月11日核实"
+      },
+      {
+        "title": "蚂蚁百灵 Ling-3.2-flash 限时免费调用",
+        "url": "https://developer.ant-ling.com/zh-CN/docs/models/price/",
+        "amount": "免费",
+        "desc": "仅 Ling-3.2-flash，其他百灵模型按各自规则计费",
+        "note": "部分模型 · 需绑定支付宝 · 免费期后收费 · 到 11月18日 · 11月11日核实"
+      },
+      {
+        "title": "OpenCode 限时免费用 MiniMax、LongCat、DeepSeek 等模型",
+        "url": "https://opencode.ai/docs/console/models/",
+        "amount": "免费",
+        "desc": "中国大陆可用的 MiniMax M3.1 Flash Free、LongCat 2.5 Free、DeepSeek V4.1 Flash Free、GLM-5.3-Flash Free、MiMo-V2.6-Flash Free、Inkling 2 Small Free、Iceman Free 等指定免费模型；不含 Beam；仅限 OpenCode 内使用",
+        "note": "部分模型 · 限产品内使用 · LongCat 日限百次 · 部分数据用于训练 · Beam 限海外 · 11月11日核实"
+      },
+      {
+        "title": "OCR、语音、向量与生图模型免费调用",
+        "url": "https://www.siliconflow.cn/pricing",
+        "amount": "免费",
+        "desc": "定价页标免费的模型：PaddleOCR-VL-1.5、BGE 向量与重排系列、Kolors、SenseVoiceSmall、XingChen ASR/GSR 系列、Hunyuan-MT-7B、Xing4.0-29B；不含 Pro 版本及其他收费模型",
+        "note": "部分模型 · 要实名 · 按模型限速 · 文生图 · 11月11日核实"
+      },
+      {
+        "title": "SoMark OXR 免费解析文档 API",
+        "url": "https://somark.cn/oxr",
+        "amount": "免费",
+        "desc": "仅 OXR 文档解析模型，不含 SoMark 其他服务",
+        "note": "部分模型 · 无需注册 · 请求排队 · 不建议生产使用 · 11月11日核实"
+      }
+    ]
+  }
+]

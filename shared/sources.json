@@ -161,6 +161,25 @@
     "color": "green",
     "interval": 600000
   },
+  "ai-daily": {
+    "name": "AI 早报",
+    "type": "hottest",
+    "desc": "每日 AI 要闻与快讯，本地快照",
+    "column": "tech",
+    "home": "/c/ai",
+    "color": "blue",
+    "interval": 300000
+  },
+  "ai-eggs": {
+    "title": "免费 Token",
+    "name": "赛博鸡蛋篮",
+    "type": "hottest",
+    "desc": "现在能免费领的大模型额度",
+    "column": "tech",
+    "home": "/c/ai",
+    "color": "yellow",
+    "interval": 3600000
+  },
   "tieba": {
     "title": "热议",
     "name": "百度贴吧",

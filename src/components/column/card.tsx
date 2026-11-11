@@ -64,12 +64,12 @@ function NewsCard({ id, setHandleRef }: NewsCardProps) {
     queryKey: ["source", id],
     queryFn: async ({ queryKey }) => {
       const id = queryKey[1] as SourceID
-      const url = `/s?id=${id}&latest`
+      const force = refetchSources.delete(id)
+      const url = `/s?id=${id}&latest${force ? "&force=1" : ""}`
       const headers: Record<string, any> = {}
-      if (refetchSources.has(id)) {
+      if (force) {
         const jwt = safeParseString(localStorage.getItem("jwt"))
         if (jwt) headers.Authorization = `Bearer ${jwt}`
-        refetchSources.delete(id)
       } else if (cacheSources.has(id) && Date.now() - Number(cacheSources.get(id)!.updatedTime) < 120_000) {
         // wait animation
         await delay(200)
@@ -126,7 +126,7 @@ function NewsCard({ id, setHandleRef }: NewsCardProps) {
             target="_blank"
             rel="noopener noreferrer"
             aria-label={`${sources[id].name}官网`}
-            href={sources[id].home}
+            href={sources[id].home?.startsWith("/") ? withBase(sources[id].home) : sources[id].home}
             title={sources[id].desc}
             style={{
               backgroundImage: `url(${withBase(`icons/${id.split("-")[0]}.png`)})`,

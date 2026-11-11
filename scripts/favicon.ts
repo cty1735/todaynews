@@ -32,7 +32,7 @@ async function main() {
           // consola.info(`${id}: icon exists. skip.`)
           return
         }
-        if (!source.home) return
+        if (!source.home || source.home.startsWith("/")) return
         await downloadImage(`https://icons.folo.is/${source.home.replace(/^https?:\/\//, "").replace(/\/$/, "")}`, icon, id)
       } catch (e) {
         consola.error(id, "\n", e)

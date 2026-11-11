@@ -42,7 +42,7 @@ export const fixedColumnIds = ["ai", "focus", "hottest", "realtime", "updated"] 
 export const hiddenColumns = Object.keys(columns).filter(id => !fixedColumnIds.includes(id as any)) as HiddenColumnID[]
 
 /** 重点来源：置顶排在最前，卡片加重样式（见 components/column/card.tsx） */
-export const featuredSourceIds: SourceID[] = []
+export const featuredSourceIds: SourceID[] = ["ai-daily", "ai-eggs"]
 
 function getSortedSourceIds(type: "hottest" | "realtime") {
   return typeSafeObjectEntries(sources)

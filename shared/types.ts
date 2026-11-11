@@ -110,22 +110,85 @@ export interface SourceResponse {
   info?: any
 }
 
-/** AI 日报条目（由站内科技来源聚合） */
-export interface AiDigestItem {
+/** AI 日报条目 */
+export interface AiNewsEntry {
+  title: string
+  summary?: string
+  leadParagraph?: string
+  source?: { name?: string }
+  links?: { aihot?: string, original?: string }
+  publishedAt?: string
+}
+
+export interface AiDailyReport {
+  date: string
+  generatedAt?: string
+  links?: { aihot?: string }
+  lead?: AiNewsEntry
+  highlights?: AiNewsEntry[]
+  sections?: Array<{ label: string, items: AiNewsEntry[] }>
+  flashes?: AiNewsEntry[]
+}
+
+export interface AiDailyData {
+  updatedAt: number
+  report?: AiDailyReport
+  items: AiNewsEntry[]
+}
+
+/** 赛博鸡蛋篮条目（本地维护） */
+export interface AiEggItem {
   title: string
   url: string
-  source?: string
-  publishedAt?: number
+  amount?: string
+  /** 适用模型等一句话说明 */
+  desc?: string
+  /** 门槛标签串，如「部分模型 · 要实名 · 11月11日核实」 */
+  note?: string
 }
 
-export interface AiDigestSection {
+export interface AiEggGroup {
   label: string
-  items: AiDigestItem[]
+  items: AiEggItem[]
 }
 
-export interface AiDigestData {
+export interface AiEggData {
   updatedAt: number
-  date: string
-  total: number
-  sections: AiDigestSection[]
+  groups: AiEggGroup[]
+}
+
+/** 模型排行榜单行（字段来自 arenaofbias 上游） */
+export interface AiLeaderboardRow {
+  rank: number
+  key: string
+  model: string
+  modelName: string
+  vendor: string
+  effort: string
+  score: number
+  /** ±95% 置信区间 */
+  interval: number
+  games: number
+  wins: number
+  draws: number
+  losses: number
+  winRate: number
+  voters: number
+  tasks: number
+  works: number
+  provisional: boolean
+}
+
+export interface AiLeaderboardData {
+  category?: string
+  by?: string
+  /** 综合榜下每个赛道各自的模型名次；按 category 过滤时上游不给 */
+  standings?: Record<string, Record<string, number>>
+  totals: { votes: number, voters: number, entries: number, tasks: number }
+  rows: AiLeaderboardRow[]
+  unranked?: Array<{ modelName?: string, model?: string }>
+  provisionalGames: number
+  minimumGames: number
+  refreshIntervalSeconds: number
+  updatedAt: string
 }
