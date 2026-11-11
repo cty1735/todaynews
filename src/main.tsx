@@ -3,6 +3,7 @@ import { RouterProvider, createRouter } from "@tanstack/react-router"
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query"
 import { routeTree } from "./routeTree.gen"
 import "./utils/pwa"
+import { trackPageview } from "./utils/analytics"
 
 const queryClient = new QueryClient()
 
@@ -16,6 +17,16 @@ const router = createRouter({
 })
 
 const rootElement = document.getElementById("app")!
+
+// 首屏由 hm.js 自己记一次，之后的路由切换手动补
+let firstResolved = true
+router.subscribe("onResolved", ({ toLocation }) => {
+  if (firstResolved) {
+    firstResolved = false
+    return
+  }
+  trackPageview(toLocation.pathname)
+})
 
 if (!rootElement.innerHTML) {
   const root = ReactDOM.createRoot(rootElement)

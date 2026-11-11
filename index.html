@@ -34,6 +34,20 @@
     }
   </script>
   <title>TodayNews</title>
+
+  <!-- 百度统计：只在线上域名加载，本地 localhost/内网地址不打点 -->
+  <script>
+    // 只排除本机/局域网 IP，线上域名才打点
+    if (!/^(localhost|[\d.]+|\[.*\])$/.test(location.hostname)) {
+      var _hmt = _hmt || [];
+      (function () {
+        var hm = document.createElement("script");
+        hm.async = true;
+        hm.src = "https://hm.baidu.com/hm.js?5a10f2bd21093e9da0a2c238ce1507a0";
+        document.head.appendChild(hm);
+      })();
+    }
+  </script>
 </head>
 
 <body>
