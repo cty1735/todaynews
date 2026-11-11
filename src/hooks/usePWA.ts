@@ -10,17 +10,14 @@ export function usePWA() {
       })
     }
     return subscribePwaUpdateState((state) => {
-      if (state === "ready") {
-        toaster("有更新，5 秒后自动更新", {
-          action: {
-            label: "立刻更新",
-            onClick: update,
-          },
-          onDismiss: update,
-        })
-      } else if (state === "successful") {
-        toaster("更新成功，赶快体验吧")
-      }
+      if (state !== "ready") return
+      toaster("有更新，5 秒后自动更新", {
+        action: {
+          label: "立刻更新",
+          onClick: update,
+        },
+        onDismiss: update,
+      })
     })
   }, [toaster])
 }
