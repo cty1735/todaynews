@@ -19,13 +19,15 @@ const router = createRouter({
 const rootElement = document.getElementById("app")!
 
 // 首屏由 hm.js 自己记一次，之后的路由切换手动补
+// 带上部署子路径，好让百度统计的「页面/目录」把两个站分开
+const BASE = import.meta.env.BASE_URL.replace(/\/+$/, "")
 let firstResolved = true
 router.subscribe("onResolved", ({ toLocation }) => {
   if (firstResolved) {
     firstResolved = false
     return
   }
-  trackPageview(toLocation.pathname)
+  trackPageview(BASE + toLocation.pathname)
 })
 
 if (!rootElement.innerHTML) {
